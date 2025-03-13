@@ -10,10 +10,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repository without submodules
         uses: actions/checkout@v4
         with:
           submodules: false
-      # Add additional steps for your build/test here
       - name: Run a basic command
-        run: echo "GitHub Actions workflow running!"
+        run: echo "Workflow running without submodule checkout!"
