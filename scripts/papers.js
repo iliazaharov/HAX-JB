@@ -1,55 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("papers.js loaded");
-
-    let googleCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRkIZurSAcU-SJokww4E6p039pnJykcGCspaktlNjNJkvaGN_LBGEMliUSwda26pT84Z1rRPXUHTV4b/pub?output=csv&single=true";
-
-    let table = new Tabulator("#papers-table", {
-        height: "500px",
-        layout: "fitData",
-        ajaxURL: googleCsvUrl,
-        // Override the default AJAX request so we fetch plain text
-        ajaxRequestFunc: function(url, config, params) {
-            return fetch(url).then(response => response.text());
-        },
-        ajaxResponse: function(url, params, response) {
-            // Parse CSV using PapaParse with headers inferred from the CSV
-            let parsed = Papa.parse(response, { header: true });
-            console.log("Parsed CSV Data:", parsed.data);
-            return parsed.data;
-        },
-        columns: [
-            {
-                title: "Paper",
-                field: "Paper",
-                widthGrow: 2,
-                formatter: function(cell) {
-                    let rowData = cell.getRow().getData();
-                    // Use the Link field from CSV to create a clickable title
-                    return `<a href="${rowData.Link}" target="_blank">${rowData.Paper}</a>`;
-                }
-            },
-            { title: "Auth", field: "Auth" },
-            { title: "Tax", field: "Tax" },
-        ],
-    });
-
-    // Grouping logic (update select options accordingly if needed)
-    let groupBySelect = document.getElementById("groupBySelect");
-    groupBySelect.addEventListener("change", function() {
-        let groupField = groupBySelect.value;
-        table.setGroupBy(groupField || null);
-    });
-
-    // Search logic: update filtering to match CSV header names
-    let searchInput = document.getElementById("searchInput");
-    searchInput.addEventListener("keyup", function() {
-        let query = searchInput.value.toLowerCase();
-        table.setFilter((data) => {
-            return (
-                data.Paper?.toLowerCase().includes(query) ||
-                data.Auth?.toLowerCase().includes(query) ||
-                data.Tax?.toLowerCase().includes(query)
-            );
-        });
-    });
-});
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+    <title>My Lab – Conferences</title>
+<style>
+    /* Ensure the iframe fills the viewport width and adjust height as needed */
+    iframe {
+    width: 100%;
+    height: 800px; /* Adjust the height if needed */
+    border: none;
+}
+    /* If there's a container limiting width, override its styling */
+    #iframe-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0; /* Remove any default margins if necessary */
+    padding: 0;
+}
+</style>
+</head>
+<body>
+<h1>Published Google Doc (Wider View)</h1>
+<div id="iframe-container">
+    <iframe src="https://docs.google.com/document/d/e/2PACX-1vQ_0qDX3xjIjBoZNLZzm7wtzw-cMxnGwaB6W4AmTBBou9BoXEU2RjlTSl7D4dIxCfAajTtyxzyzeGg7/pub?embedded=true"></iframe>
+</div>
+</body>
+</html>
