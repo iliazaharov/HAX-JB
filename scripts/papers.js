@@ -6,13 +6,13 @@
 <style>
     /* Ensure the iframe fills the viewport width and adjust height as needed */
     iframe {
-    width: 100%;
+    // width: 100%;
     height: 800px; /* Adjust the height if needed */
     border: none;
 }
     /* If there's a container limiting width, override its styling */
     #iframe-container {
-    width: 100%;
+    // width: 100%;
     max-width: 100%;
     margin: 0; /* Remove any default margins if necessary */
     padding: 0;
