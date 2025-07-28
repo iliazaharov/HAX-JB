@@ -5,6 +5,7 @@
     <title>Useful Reads</title>
     <!-- Skeleton CSS for a minimal, responsive layout -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <!-- ‼️ NEW <style> – replace the whole old block -->
     <style>
         body {
             margin-top: 2em;
@@ -30,51 +31,54 @@
             margin-bottom: 0.5em;
             color: #0074D9;
         }
-        section {
-            margin-bottom: 2em;
-        }
-        section h2 {
+        section          { margin-bottom: 2em; }
+        section h2       {
             font-size: 1.8em;
             margin-bottom: 1em;
             border-bottom: 2px solid #eee;
-            padding-bottom: 0.3em;
+            padding-bottom: .3em;
             color: #333;
         }
+
+        /* -------- Card without thumbnail -------- */
         .card {
-            display: flex;
-            align-items: flex-start;
-            background: #fafafa;
-            padding: 1em;
+            position: relative;
+            padding: 1em 1.2em;
             margin-bottom: 1.5em;
+
+            /* thin accent bar */
+            border-left: 4px solid #0074D9;
+
+            background: #fafafa;
             border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,.08);
+
+            /* subtle lift on hover */
+            transition: transform .15s ease, box-shadow .15s ease;
         }
-        .card img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 4px;
-            margin-right: 1em;
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,.12);
         }
-        .card-content {
-            flex: 1;
-        }
-        .card-content h3 {
-            margin: 0 0 0.5em 0;
-            font-size: 1.1em;
+
+        /* content */
+        .card-content      { /* no flex needed now */ }
+        .card-content h3   {
+            margin: 0 0 .4em 0;
+            font-size: 1.15em;          /* a bit larger */
+            font-weight: 600;
             color: #0074D9;
         }
-        .card-content a {
-            color: #0074D9;
+        .card-content a    {
+            color: inherit;             /* keep link same colour as h3 */
             text-decoration: none;
-            font-weight: bold;
         }
         .card-content a:hover {
             text-decoration: underline;
         }
-        .card-content p {
+        .card-content p    {
             margin: 0;
-            font-size: 0.95em;
+            font-size: .95em;
             color: #555;
         }
     </style>
@@ -100,13 +104,19 @@
 
         <!-- Resource 1: One Useful Thing -->
         <div class="card">
-            <img src="https://via.placeholder.com/80" alt="One Useful Thing">
             <div class="card-content">
-                <h3><a href="https://www.oneusefulthing.org/" target="_blank">One Useful Thing (Ethan Mollick’s Blog)</a></h3>
-                <p>A regularly updated blog by educator and researcher Ethan Mollick that provides practical insights into how emerging AI tools impact learning, creativity, and everyday human experiences.</p>
+                <h3>
+                    <a href="https://www.oneusefulthing.org/" target="_blank">
+                        One Useful Thing (Ethan Mollick’s Blog)
+                    </a>
+                </h3>
+                <p>
+                    A regularly updated blog by educator and researcher Ethan Mollick that
+                    provides practical insights into how emerging AI tools impact learning,
+                    creativity, and everyday human experiences.
+                </p>
             </div>
         </div>
-
         <!-- Resource 2: Interacting with Text -->
         <div class="card">
             <img src="https://via.placeholder.com/80" alt="Interacting with Text">
