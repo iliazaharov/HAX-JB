@@ -1,134 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AI Projects Overview</title>
-  <!-- Skeleton CSS for a minimal, responsive layout -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <meta charset="UTF-8" />
+  <title>AI Projects Overview – Human‑AI Experience Research Team</title>
+
+  <!-- Base framework & shared styles -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="/Styles/navigation.css">
+  <link rel="stylesheet" href="/Styles/page-box.css"><!-- grey bg + .page‑box -->
+
+  <!-- Page‑specific tweaks -->
   <style>
-    body {
-      margin-top: 2em;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.3em;
-    }
-    header p {
-      color: #555;
-      font-size: 1.1em;
-    }
-    .project {
-      margin-bottom: 3em;
-      padding: 1em;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-      background: #f9f9f9;
-    }
-    .project h2 {
-      color: #0074D9;
-      margin-bottom: 0.5em;
-    }
-    .project em {
-      display: block;
-      margin-bottom: 1em;
-      color: #777;
-    }
-    .section-title {
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 0.5em;
-      color: #333;
-    }
-    .project p {
-      margin-bottom: 1em;
-    }
-    .figure-placeholder {
-      display: block;
-      margin: 0 auto 1em auto;
-      max-width: 100%;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
+    /* project card */
+    .project         { margin-bottom:3rem; padding:1.25rem;
+      border:1px solid #e0e0e0; border-radius:4px; background:#f9f9f9; }
+    .project h2      { color:#0074D9; margin-bottom:.5em; }
+    .project em      { display:block; margin-bottom:1em; color:#777; }
+    .section-title   { font-weight:bold; text-transform:uppercase;
+      margin-bottom:.5em; color:#333; }
+    .project p       { margin-bottom:1em; }
+    .figure-placeholder { display:block; margin:0 auto 1em; max-width:100%;
+      border:1px solid #ddd; border-radius:4px; }
   </style>
 </head>
+
 <body>
-<div class="container">
-  <header>
-    <h1>AI Projects Overview</h1>
-    <p>Collaborations: UZH, UBC, UCI, TU Delft</p>
-  </header>
-  <nav style="margin: 1em 0;">
-    <a href="about.html">About</a> |
-    <a href="interesting.html">Interesting</a> |
-    <a href="team.html">Team</a> |
-    <a href="papers.html">Papers</a> |
-    <a href="collaborations.html">Collaborations</a> |
-    <a href="publications.html">Publications</a> |
-    <a href="conferences_older.html">Conferences to follow</a>
-  </nav>
-  <!-- Project 1: AI in Developer Teams -->
-  <div class="project">
-    <h2>AI in Developer Teams</h2>
-    <img src="https://via.placeholder.com/400x200" alt="Figure Placeholder" class="figure-placeholder">
-    <div>
-      <div class="section-title">Motivation</div>
-      <p>
-        The integration of GenAI in software development teams has the potential to transform traditional workflows, communication, and collaboration methods. As AI tools become more accessible and robust, many teams are beginning to rely on them to streamline problem-solving, knowledge sharing, and task management. However, the impact of AI on team dynamics, productivity, and knowledge transfer remains underexplored. By examining when, why, and how software developers choose AI over human interactions, this study aims to uncover the patterns and behaviors that emerge, providing insight into the evolving role of AI within collaborative team environments.
-      </p>
-    </div>
-    <div>
-      <div class="section-title">Goals</div>
-      <p>
-        The primary goal of this study is to explore how GenAI changes the way software development teams work, investigating how GenAI improves or deteriorates team communication and problem-solving. It also aims to examine what aspects of traditional workflows or human roles are replaced or become obsolete due to AI assistants. As a result, we hope to identify usage patterns and factors that correlate with team success or challenges in using AI, aiding in the formulation of best practices for AI integration.
-      </p>
-    </div>
-  </div>
+<!-- ───────────── Shared Site Header ───────────── -->
+<header class="site‑header">
+  <div class="wrap">
+    <h1 class="site‑title">HAX Collaborations</h1>
 
-  <!-- Project 2: Longitudinal Analysis of AI Impact -->
-  <div class="project">
-    <h2>Longitudinal Analysis of AI Impact</h2>
-    <em>Collaboration with UCI</em>
-    <img src="https://via.placeholder.com/400x200" alt="Figure Placeholder" class="figure-placeholder">
-    <div>
-      <div class="section-title">Motivation</div>
-      <p>
-        At JetBrains, we have a lot of data that could be analyzed to derive trends and changes in developers' behavior in the IDE under the effect of AI integration. We want to use this data to predict the field's further development.
-      </p>
-    </div>
-    <div>
-      <div class="section-title">Goals</div>
-      <p>
-        The goal of the project is to derive trends in AI-affected metrics of in-IDE activity. We also want to understand and define changes of metrics of in-IDE activity that might be attributed to AI integration. This knowledge of trends can be later used for developing new in-IDE AI features for better user satisfaction.
-      </p>
-    </div>
+    <nav class="main‑nav">
+      <a href="index.html">About</a>
+      <a href="interesting.html">Interesting</a>
+      <a href="team.html">Team</a>
+      <a href="papers.html">Papers</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="publications.html">Publications</a>
+      <a href="conferences.html">Conferences to follow</a>
+    </nav>
   </div>
+</header>
 
-  <!-- Project 3: User-Centered In-IDE HAX -->
-  <div class="project">
-    <h2>User-Centered In-IDE HAX</h2>
-    <em>Collaboration with TU Delft</em>
-    <img src="https://via.placeholder.com/400x200" alt="Figure Placeholder" class="figure-placeholder">
-    <div>
-      <div class="section-title">Motivation</div>
-      <p>
-        An essential part of the success of tools like GitHub Copilot and ChatGPT is their interface. While some of these models' capabilities were available before, the tools brought them to larger audiences without dramatically disrupting their workflow or requiring lots of additional steps. IDE users have their own workflows and the injection of new complex features, such as LLM-based ones, is a non-trivial task. We believe that there is significant space for innovation in the field of Human-AI interaction. While chat is a popular and user-friendly way of using LLMs, we believe there are better ways to utilize them in IDEs.
-      </p>
-    </div>
-    <div>
-      <div class="section-title">Goals</div>
-      <p>
-        The goal of this project is to embed emerging LLMs practices as code generation or code explanation into the developer workflow without disturbing the user and improving their productivity.
-      </p>
-    </div>
-  </div>
+<!-- ───────────── Page‑specific Content ───────────── -->
+<main class="wrap">
+  <div class="page-box">
+    <header style="text-align:center;margin-bottom:2rem;">
+      <h1>The work we are proud to share with colleagues</h1>
+    </header>
 
-</div>
+    <!-- Project 1 -->
+    <div class="project">
+      <h2>AI in Developer Teams</h2>
+      <em>Collaboration with ...</em>
+      <img src="https://via.placeholder.com/400x200"
+           alt="Figure Placeholder" class="figure-placeholder">
+
+      <div>
+        <div class="section-title">Motivation</div>
+        <p>
+          GenAI has the potential to transform traditional workflows,
+          communication, and collaboration methods in software development
+          teams. This study explores when, why, and how developers choose AI
+          tools over human interaction, revealing emerging patterns in
+          AI‑mediated team dynamics.
+        </p>
+      </div>
+
+      <div>
+        <div class="section-title">Goals</div>
+        <p>
+          Investigate how GenAI improves or deteriorates team
+          communication and problem‑solving, and identify usage patterns that
+          correlate with team success or friction. Outputs will inform best
+          practices for integrating AI in collaborative environments.
+        </p>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <h2>Longitudinal Analysis of AI Impact</h2>
+      <em>Collaboration with UCI</em>
+      <img src="https://via.placeholder.com/400x200"
+           alt="Figure Placeholder" class="figure-placeholder">
+
+      <div>
+        <div class="section-title">Motivation</div>
+        <p>
+          JetBrains hosts vast IDE telemetry that can reveal how developer
+          behaviour shifts after AI integration. Analysing this data will
+          help forecast future trends.
+        </p>
+      </div>
+
+      <div>
+        <div class="section-title">Goals</div>
+        <p>
+          Derive trends in AI‑affected IDE metrics and map which changes most
+          plausibly stem from AI usage, guiding feature ideation for higher
+          user satisfaction.
+        </p>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <h2>User‑Centred In‑IDE HAX</h2>
+      <em>Collaboration with TU Delft</em>
+      <img src="https://via.placeholder.com/400x200"
+           alt="Figure Placeholder" class="figure-placeholder">
+
+      <div>
+        <div class="section-title">Motivation</div>
+        <p>
+          Successful tools like Copilot owe much to interface design. IDE
+          users have distinct workflows; injecting LLM‑powered features
+          without disruption poses a rich HCI challenge.
+        </p>
+      </div>
+
+      <div>
+        <div class="section-title">Goals</div>
+        <p>
+          Embed code generation, explanation, and other LLM practices into the
+          IDE in ways that feel natural and boost productivity rather than
+          distract.
+        </p>
+      </div>
+    </div>
+  </div><!-- /page‑box -->
+</main>
 </body>
 </html>

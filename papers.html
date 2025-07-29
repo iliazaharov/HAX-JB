@@ -1,52 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <title>My Lab – Papers</title>
-  <!-- Include Tabulator CSS -->
-  <link href="https://unpkg.com/tabulator-tables@5.4.3/dist/css/tabulator.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <meta charset="utf-8" />
+  <title>Papers – Human‑AI Experience Research Team</title>
+
+  <!-- Base framework & shared styles -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="/Styles/navigation.css">
+  <link rel="stylesheet" href="/Styles/page-box.css"><!-- grey bg + .page‑box -->
+
+  <!-- Tabulator grid -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/tabulator-tables@5.4.3/dist/css/tabulator.min.css">
+
+  <!-- Page‑unique tweaks -->
+  <style>
+    #papers-table { margin-top:1.5rem; }
+  </style>
 </head>
+
 <body>
+<!-- ───────────── Shared Site Header ───────────── -->
+<header class="site‑header">
+  <div class="wrap">
+    <h1 class="site‑title">Human‑AI Experience Research Team</h1>
 
+    <nav class="main‑nav">
+      <a href="index.html">About</a>
+      <a href="interesting.html">Interesting</a>
+      <a href="team.html">Team</a>
+      <a href="papers.html">Papers</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="publications.html">Publications</a>
+      <a href="conferences.html">Conferences to follow</a>
+    </nav>
+  </div>
+</header>
 
-<h1>Papers</h1>
+<!-- ───────────── Page‑specific Content ───────────── -->
+<!-- Page‑specific Content -->
+<main class="wrap">
+  <div class="page-box">
+    <header>
+      <h1>Papers</h1>
+    </header>
 
-<nav>
-  <a href="index.html">About</a> |
-  <a href="interesting.html">Interesting</a> |
-  <a href="team.html">Team</a> |
-  <a href="papers.html">Papers</a> |
-  <a href="collaborations.html">Collaborations</a> |
-  <a href="publications.html">Publications</a> |
-  <a href="conferences_older.html">Conferences to follow</a>
+    <!-- ▼▼ NEW: Only one control, for grouping ▼▼ -->
+    <label for="groupBySelect">Group&nbsp;by:</label>
+    <select id="groupBySelect">
+      <option value="">(None)</option>
+      <option value="Affiliation">Affiliation</option>
+      <option value="Context">Context</option>
+      <option value="Scope">Scope</option>     <!-- ← shorter internal name -->
+    </select>
+    <!-- ▲▲ Search box removed ▲▲ -->
 
-</nav>
-<!-- Dropdown to choose grouping -->
-<label for="groupBySelect">Group By:</label>
-<select id="groupBySelect">
-  <option value="">(No Grouping)</option>
-  <option value="Affiliation">Affiliation</option>
-  <option value="Taxonomy">Taxonomy</option>
-</select>
+    <!-- Tabulator target -->
+    <div id="papers-table"></div>
+  </div>
+</main>
 
-<!-- Simple search box -->
-<label for="searchInput">Search:</label>
-<input type="text" id="searchInput" placeholder="Type to search..."/>
-
-<!-- Table container -->
-<div id="papers-table"></div>
-
-<!-- Tabulator CSS -->
-<link href="https://unpkg.com/tabulator-tables@5.4.3/dist/css/tabulator.min.css" rel="stylesheet">
-
-<!-- Tabulator JS -->
+<!-- Libraries -->
 <script src="https://unpkg.com/tabulator-tables@5.4.3/dist/js/tabulator.min.js"></script>
-
-<!-- PapaParse (CSV parser) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
 
-<!-- Your custom JS -->
+<!-- Your code -->
 <script src="scripts/papers.js"></script>
 </body>
 </html>

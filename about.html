@@ -1,85 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Human-AI Experience Research Team</title>
-    <!-- Skeleton CSS for a minimal, responsive layout -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <!-- Optional: Custom CSS overrides -->
+    <meta charset="UTF-8" />
+    <title>Human‑AI Experience Research Team</title>
+
+    <!-- Skeleton for basic layout -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <!-- Shared navigation / layout rules (the one that defines .wrap, .site‑header, etc.) -->
+    <link rel="stylesheet" href="/Styles/navigation.css">
+
+    <!-- Page‑specific tweaks -->
     <style>
         body {
             margin-top: 2em;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #f8f8f8;
+            color: #333;
             line-height: 1.6;
         }
-        header, section {
+
+        /* white card that holds this page’s content */
+        .page-box {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2em;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* page headline */
+        .page-box header {
+            text-align: center;
             margin-bottom: 2em;
         }
-        h1, h2 {
+        .page-box header h1 {
+            font-size: 2.5em;
             margin-bottom: 0.5em;
+            color: #0074D9;
         }
-        ul {
-            list-style: disc inside;
-            margin-left: 1em;
+
+        /* section headings */
+        section          { margin-bottom: 2em; }
+        section h2       {
+            font-size: 1.8em;
+            margin-bottom: 1em;
+            border-bottom: 2px solid #eee;
+            padding-bottom: .3em;
+            color: #333;
         }
-        /* New styles for the image */
-        .team-photo {
-            max-width: 300px; /* Adjust to desired size */
-            display: block;   /* Makes the image a block element */
-            margin: 0 auto;   /* Centers the image horizontally */
-        }
+
+        /* ---- card style ---- */
+        .card               { position: relative; padding: 1em 1.2em; margin-bottom: 1.5em;
+            border-left: 4px solid #0074D9; background:#fafafa;
+            border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,.08);
+            transition: transform .15s, box-shadow .15s; }
+        .card:hover         { transform: translateY(-2px); box-shadow:0 4px 8px rgba(0,0,0,.12); }
+        .card-content h3    { margin:0 0 .4em; font-size:1.15em; font-weight:600; color:#0074D9; }
+        .card-content a     { color:inherit; text-decoration:none; }
+        .card-content a:hover { text-decoration:underline; }
+        .card-content p     { margin:0; font-size:.95em; color:#555; }
     </style>
-</head>
+
 <body>
-<div class="container">
-    <!-- Header -->
-    <header>
-        <h1>Human-AI Experience Research Team</h1>
-    </header>
-    <div class="container">
-        <nav style="margin: 1em 0;">
-            <a href="about.html">About</a> |
-            <a href="interesting.html">Interesting</a> |
-            <a href="team.html">Team</a> |
-            <a href="papers.html">Papers</a> |
-            <a href="collaborations.html">Collaborations</a> |
-            <a href="publications.html">Publications</a> |
-            <a href="conferences_older.html">Conferences to follow</a>
+<!-- 1 —‑‑‑‑‑ Shared site header (one copy only) -->
+<header class="site‑header">
+    <div class="wrap">
+        <h1 class="site‑title">Human‑AI Experience Research Team</h1>
+
+        <nav class="main‑nav">
+            <a href="index.html">About</a>
+            <a href="interesting.html">Interesting</a>
+            <a href="team.html">Team</a>
+            <a href="papers.html">Papers</a>
+            <a href="collaborations.html">Collaborations</a>
+            <a href="publications.html">Publications</a>
+            <a href="conferences.html">Conferences to follow</a>
         </nav>
-        <!-- Photo Section -->
-        <section>
-            <img src="images/HAX.png" alt="Human + AI = interaction" class="team-photo">
-        </section>
-
-        <!-- Introduction Section -->
-        <section>
-            <p>JetBrains develops tools for technology creators, and at the Human-AI Experience Research team, we’re all about making those tools even better. Our team specializes in user studies and prototyping to invent and investigate human-AI interaction scenarios that enhance the work of technology creators.</p>
-        </section>
-
-        <!-- Research Focus Section -->
-        <section>
-            <h2>Our Research</h2>
-            <p>Our research spans three core areas: <strong>Design</strong>, <strong>Impact</strong>, and <strong>Quality of Interaction with AI</strong>. We investigate critical questions, such as the most effective HAX implementation in an IDE and development lifecycle, the influence of in-IDE HAX on users' experiences and characteristics, and the key attributes of AI output that better support users. By understanding how developers think, learn, and work with AI, we can suggest new seamless and intuitive AI feature ideas and prototypes tailored for JetBrains users' needs.</p>
-        </section>
-
-        <!-- Approach Section -->
-        <section>
-            <h2>Our Approach</h2>
-            <p>Our approach goes beyond traditional user experience research and A/B testing. We leverage our expertise in cognitive psychology and data analysis to conduct experimental mixed-method studies, adhering to rigorous academic standards. This expertise also guides us in addressing technical challenges with attention to unique human characteristics, ultimately optimizing the user interface and functionality of AI-driven JetBrains tools.</p>
-        </section>
-
-        <!-- What We Bring Section -->
-        <section>
-            <h2>What Do We Bring to the Table</h2>
-            <ul>
-                <li>
-                    <strong>Innovation Ahead of Product Roadmaps:</strong> We generate knowledge and novel ideas for features and forms of HAX, staying ahead of the curve and ensuring JetBrains remains a leader in AI-driven development tools.
-                </li>
-                <li>
-                    <strong>Creating and Enhancing AI-Feature Prototypes:</strong> We leverage our research for developing new AI-feature prototypes for JetBrains tools and for increasing user awareness of tools developed by other teams, enhancing user flows in IDEs and overall development workflows both within and outside the IDE.
-                </li>
-            </ul>
-        </section>
     </div>
-</div>
+</header>
+
+<!-- 2 —‑‑‑‑‑ Page‑specific content -->
+<main class="wrap">
+    <div class="page-box">
+        <header style="text-align:center;margin-bottom:2rem;">
+            <h1>Who are we</h1>
+        </header>
+        <!-- Hero image -->
+        <section>
+            <img src="images/HAX.png"
+                 alt="Human + AI = interaction"
+                 class="team-photo"
+                 style="max-width:220px;width:100%;height:auto;display:block;margin:0 auto;">
+        </section>
+    <!-- Introduction -->
+    <section>
+        <p>JetBrains develops tools for technology creators, and at the Human-AI Experience Research team,
+            we’re all about making those tools even better. Our team specializes in
+            user studies and prototyping to invent and investigate human-AI interaction scenarios
+            that enhance the work of technology creators.</p>
+    </section>
+
+    <!-- Our Research -->
+    <section>
+        <h2>Our Research</h2>
+        <p>Our research spans three core areas: <strong>Design</strong>, <strong>Impact</strong>, and <strong>Quality of Interaction with AI</strong>.
+            We investigate critical questions, such as the most effective HAX implementation in an IDE and development lifecycle,
+            the influence of in-IDE HAX on users' experiences and characteristics, and the key attributes of AI output that better support users.
+            By understanding how developers think, learn, and work with AI, we can suggest new seamless and
+            intuitive AI feature ideas and prototypes tailored for JetBrains users' needs.</p>
+    </section>
+
+    <!-- Approach -->
+    <section>
+        <h2>Our Approach</h2>
+        <p>Our approach goes beyond traditional user experience research and A/B testing.
+            We leverage our expertise in cognitive psychology and data analysis to conduct experimental mixed-method studies,
+            adhering to rigorous academic standards. This expertise also guides us in addressing technical challenges with attention to unique human characteristics,
+            ultimately optimizing the user interface and functionality of AI-driven JetBrains tools.</p>
+    </section>
+
+    <!-- What We Bring -->
+    <section>
+        <h2>What Do We Bring to the Table</h2>
+        <ul>
+            <li>
+                <strong>Innovation Ahead of Product Roadmaps:</strong>
+                We generate knowledge and novel ideas for features and forms of HAX,
+                staying ahead of the curve and ensuring JetBrains remains a leader in AI-driven development tools.</li>
+            <li><strong>Creating and Enhancing AI-Feature Prototypes:</strong>
+                We leverage our research for developing new AI-feature prototypes for JetBrains tools and for increasing user awareness of tools
+                developed by other teams, enhancing user flows in IDEs and overall development workflows both within and outside the IDE.</li>
+        </ul>
+    </section>
+</main>
 </body>
 </html>

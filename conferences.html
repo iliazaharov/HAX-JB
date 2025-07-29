@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Lab – Conferences to Follow</title>
-  <!-- Skeleton CSS for a minimal, responsive layout -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"></head>
-<body class="bg-gray-100 text-gray-900">
+  <meta charset="UTF-8" />
+  <title>Conferences to Follow – Human‑AI Experience Research Team</title>
 
-<!-- Header and Navigation -->
-<header class="bg-white shadow">
-  <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
-    <h1 class="text-2xl font-bold">My Lab – Conferences to Follow</h1>
-    <nav class="mt-4 md:mt-0">
-      <a href="index.html" class="text-blue-600 hover:underline mr-4">About</a>
-      <a href="interesting.html" class="text-blue-600 hover:underline mr-4">Interesting</a>
-      <a href="team.html" class="text-blue-600 hover:underline mr-4">Team</a>
-      <a href="papers.html" class="text-blue-600 hover:underline mr-4">Papers</a>
-      <a href="collaborations.html" class="text-blue-600 hover:underline mr-4">Collaborations</a>
-      <a href="publications.html" class="text-blue-600 hover:underline mr-4">Publications</a>
-      <a href="conferences_older.html" class="text-blue-600 hover:underline">Conferences</a>
+  <!-- Base framework & shared styles -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="/Styles/navigation.css">
+  <link rel="stylesheet" href="/Styles/page-box.css"><!-- grey bg + .page‑box -->
+
+  <!-- Page‑specific tweaks -->
+  <style>
+    /* simple, readable table */
+    table              { width:100%; border-collapse:collapse; }
+    thead              { background:#f2f2f2; }
+    th, td             { padding:.75rem; border:1px solid #ddd; text-align:left; }
+    th                 { font-size:.8rem; text-transform:uppercase;
+      letter-spacing:.05em; color:#555; }
+    tbody tr:nth-child(even) { background:#fafafa; }
+  </style>
+</head>
+
+<body>
+<!-- ───────────── Shared Site Header ───────────── -->
+<header class="site‑header">
+  <div class="wrap">
+    <h1 class="site‑title">Human‑AI Experience Research Team</h1>
+
+    <nav class="main‑nav">
+      <a href="index.html">About</a>
+      <a href="interesting.html">Interesting</a>
+      <a href="team.html">Team</a>
+      <a href="papers.html">Papers</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="publications.html">Publications</a>
+      <a href="conferences.html">Conferences to follow</a>
     </nav>
   </div>
 </header>
 
 <!-- Main Content -->
-<main class="container mx-auto px-4 py-8">
-  <h2 class="text-xl font-semibold mb-6">HCI Conferences Around the World That We Follow</h2>
-  <div class="overflow-x-auto">
+<main class="wrap">
+  <div class="page-box">
+    <header style="text-align:center;margin-bottom:2rem;">
+      <h1>HCI Conferences Around the World That We Follow</h1>
+    </header>
     <table id="conferenceTable" class="min-w-full bg-white border border-gray-200">
       <thead class="bg-gray-50">
       <tr>

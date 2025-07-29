@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Useful Reads</title>
-    <!-- Skeleton CSS for a minimal, responsive layout -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <!-- Skeleton for basic layout -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <!-- Shared navigation / layout rules (the one that defines .wrap, .site‑header, etc.) -->
+    <link rel="stylesheet" href="/Styles/navigation.css">
+    <link rel="stylesheet" href="/Styles/page-box.css">
+    <!-- Page‑specific tweaks -->
     <style>
         body {
             margin-top: 2em;
@@ -13,7 +20,9 @@
             color: #333;
             line-height: 1.6;
         }
-        .container {
+
+        /* white card that holds this page’s content */
+        .page-box {
             max-width: 960px;
             margin: 0 auto;
             background: #fff;
@@ -21,15 +30,19 @@
             border-radius: 6px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        header {
+
+        /* page headline */
+        .page-box header {
             text-align: center;
             margin-bottom: 2em;
         }
-        header h1 {
+        .page-box header h1 {
             font-size: 2.5em;
             margin-bottom: 0.5em;
             color: #0074D9;
         }
+
+        /* section headings */
         section          { margin-bottom: 2em; }
         section h2       {
             font-size: 1.8em;
@@ -39,68 +52,46 @@
             color: #333;
         }
 
-        /* -------- Card without thumbnail -------- */
-        .card {
-            position: relative;
-            padding: 1em 1.2em;
-            margin-bottom: 1.5em;
-
-            /* thin accent bar */
-            border-left: 4px solid #0074D9;
-
-            background: #fafafa;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,.08);
-
-            /* subtle lift on hover */
-            transition: transform .15s ease, box-shadow .15s ease;
-        }
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,.12);
-        }
-
-        /* content */
-        .card-content      { /* no flex needed now */ }
-        .card-content h3   {
-            margin: 0 0 .4em 0;
-            font-size: 1.15em;          /* a bit larger */
-            font-weight: 600;
-            color: #0074D9;
-        }
-        .card-content a    {
-            color: inherit;             /* keep link same colour as h3 */
-            text-decoration: none;
-        }
-        .card-content a:hover {
-            text-decoration: underline;
-        }
-        .card-content p    {
-            margin: 0;
-            font-size: .95em;
-            color: #555;
-        }
+        /* ---- card style ---- */
+        .card               { position: relative; padding: 1em 1.2em; margin-bottom: 1.5em;
+            border-left: 4px solid #0074D9; background:#fafafa;
+            border-radius:4px; box-shadow:0 1px 3px rgba(0,0,0,.08);
+            transition: transform .15s, box-shadow .15s; }
+        .card:hover         { transform: translateY(-2px); box-shadow:0 4px 8px rgba(0,0,0,.12); }
+        .card-content h3    { margin:0 0 .4em; font-size:1.15em; font-weight:600; color:#0074D9; }
+        .card-content a     { color:inherit; text-decoration:none; }
+        .card-content a:hover { text-decoration:underline; }
+        .card-content p     { margin:0; font-size:.95em; color:#555; }
     </style>
 </head>
-<body>
-<div class="container">
-    <header>
-        <h1>Useful Reads</h1>
-        <p>A curated collection of practical resources, academic research, and industry insights.</p>
-    </header>
-    <nav style="margin: 1em 0;">
-        <a href="about.html">About</a> |
-        <a href="interesting.html">Interesting</a> |
-        <a href="team.html">Team</a> |
-        <a href="papers.html">Papers</a> |
-        <a href="collaborations.html">Collaborations</a> |
-        <a href="publications.html">Publications</a> |
-        <a href="conferences_older.html">Conferences to follow</a>
-    </nav>
-    <!-- To Read Section -->
-    <section>
-        <h2>To Read</h2>
 
+<body>
+<!-- ───────────────── Shared site header ────────────────── -->
+<header class="site‑header">
+    <div class="wrap">
+        <h1 class="site‑title">Useful Reads</h1>
+
+        <nav class="main‑nav">
+            <a href="index.html">About</a>
+            <a href="interesting.html">Interesting</a>
+            <a href="team.html">Team</a>
+            <a href="papers.html">Papers</a>
+            <a href="collaborations.html">Collaborations</a>
+            <a href="publications.html">Publications</a>
+            <a href="conferences.html">Conferences to follow</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ───────────────── Page‑specific content ──────────────── -->
+<main class="wrap">
+    <div class="page-box">
+    <!-- To Read Section -->
+        <header style="text-align:center;margin-bottom:2rem;">
+            <h1>Things we find interesting to follow</h1>
+        </header>
+    <section>
+        <h2>Blogs</h2>
         <!-- Resource 1: One Useful Thing -->
         <div class="card">
             <div class="card-content">

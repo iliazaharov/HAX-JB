@@ -1,165 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Recent Publications</title>
-  <!-- Skeleton CSS for a minimal, responsive layout -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <meta charset="UTF-8" />
+  <title>Recent Publications – Human‑AI Experience Research Team</title>
+
+  <!-- Base framework & shared styles -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="/Styles/navigation.css">
+  <link rel="stylesheet" href="/Styles/page-box.css"><!-- grey bg + .page‑box -->
+
+  <!-- Page‑specific tweaks -->
   <style>
-    body {
-      margin-top: 2em;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #f8f8f8;
-      color: #333;
-      line-height: 1.6;
-    }
-    .container {
-      background: #fff;
-      padding: 2em;
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      max-width: 960px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
-    }
-    .publication {
-      margin-bottom: 2em;
-      padding-bottom: 1em;
-      border-bottom: 1px solid #e0e0e0;
-      overflow: hidden;
-    }
-    .publication:last-child {
-      border-bottom: none;
-    }
-    .pub-figure {
-      float: left;
-      width: 100px;
-      margin-right: 1em;
-      margin-bottom: 1em;
-    }
-    .pub-figure img {
-      width: 100%;
-      border-radius: 4px;
-      border: 1px solid #ddd;
-    }
-    .pub-text {
-      overflow: hidden;
-    }
-    .pub-text p {
-      margin: 0;
-    }
-    /* Clear floats after each publication */
-    .publication::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+    /* publication entry */
+    .publication        { margin-bottom:2rem; padding-bottom:1rem;
+      border-bottom:1px solid #e0e0e0; }
+    .publication:last-child { border-bottom:none; }
+    .pub-figure         { float:left; width:100px; margin:0 1em 1em 0; }
+    .pub-figure img     { width:100%; border:1px solid #ddd; border-radius:4px; }
+    .pub-text p         { margin:0; }
+    /* clear float */
+    .publication::after { content:""; display:table; clear:both; }
   </style>
 </head>
+
 <body>
-<div class="container">
-  <header>
-    <h1>Recent Publications</h1>
-  </header>
-  <nav style="margin: 1em 0;">
-    <a href="about.html">About</a> |
-    <a href="interesting.html">Interesting</a> |
-    <a href="team.html">Team</a> |
-    <a href="papers.html">Papers</a> |
-    <a href="collaborations.html">Collaborations</a> |
-    <a href="publications.html">Publications</a>
-  </nav>
-  <!-- Publication 1 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>A. Sergeyuk, I. Zakharov, E. Koshchenko, and M. Izadi,</strong> “Human-AI Experience in Integrated Development Environments: A Systematic Literature Review,” Mar. 08, 2025, arXiv:2503.06195. doi: 10.48550/arXiv.2503.06195.</p>
-    </div>
-  </div>
+<!-- ───────────── Shared Site Header ───────────── -->
+<header class="site‑header">
+  <div class="wrap">
+    <h1 class="site‑title">Human‑AI Experience Research Team</h1>
 
-  <!-- Publication 2 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>A. Sergeyuk, E. Koshchenko, I. Zakharov, T. Bryksin, and M. Izadi,</strong> “The Design Space of in-IDE Human-AI Experience,” Oct. 11, 2024, arXiv:2410.08676. doi: 10.48550/arXiv.2410.08676.</p>
-    </div>
+    <nav class="main‑nav">
+      <a href="index.html">About</a>
+      <a href="interesting.html">Interesting</a>
+      <a href="team.html">Team</a>
+      <a href="papers.html">Papers</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="publications.html">Publications</a>
+      <a href="conferences.html">Conferences to follow</a>
+    </nav>
   </div>
+</header>
 
-  <!-- Publication 3 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>M. Evtikhiev, E. Koshchenko, and V. Kovalenko,</strong> “What Could Possibly Go Wrong: Undesirable Patterns in Collective Development,” ACM Trans. Softw. Eng. Methodol., vol. 34, no. 3, p. 72:1-72:50, Feb. 2025, doi: 10.1145/3707451.</p>
+<!-- ───────────── Page‑specific Content ───────────── -->
+<main class="wrap">
+  <div class="page-box">
+    <header><h1>Recent Publications</h1></header>
+
+    <!-- Publication 1 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>A. Sergeyuk, I. Zakharov, E. Koshchenko, and M. Izadi,</strong>
+          “Human‑AI Experience in Integrated Development Environments:
+          A Systematic Literature Review,” Mar 2025,
+          <em>arXiv:2503.06195</em>.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 4 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>A. Sergeyuk, Y. Golubev, T. Bryksin, and I. Ahmed,</strong> “Using AI-Based Coding Assistants in Practice: State of Affairs, Perceptions, and Ways Forward,” Information and Software Technology, vol. 178, p. 107610, Feb. 2025, doi: 10.1016/j.infsof.2024.107610.</p>
+    <!-- Publication 2 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>A. Sergeyuk, E. Koshchenko, I. Zakharov, T. Bryksin, and M. Izadi,</strong>
+          “The Design Space of in‑IDE Human‑AI Experience,” Oct 2024,
+          <em>arXiv:2410.08676</em>.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 5 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>A. Sergeyuk, S. Titov, and M. Izadi,</strong> “In-IDE Human-AI Experience in the Era of Large Language Models; A Literature Review,” in Proceedings of the 1st ACM/IEEE Workshop on Integrated Development Environments, in IDE ’24. New York, NY, USA: Association for Computing Machinery, Aug. 2024, pp. 95–100. doi: 10.1145/3643796.3648463.</p>
+    <!-- Publication 3 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>M. Evtikhiev, E. Koshchenko, and V. Kovalenko,</strong>
+          “What Could Possibly Go Wrong: Undesirable Patterns in Collective Development,”
+          <em>ACM TOSEM 34 (3)</em>, Feb 2025.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 6 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>V. Kasatskii, A. Sergeyuk, A. Serova, S. Titov, and T. Bryksin,</strong> “The Effect of Perceptual Load on Performance Within IDE in People with ADHD Symptoms,” in Augmented Cognition, D. D. Schmorrow and C. M. Fidopiastis, Eds., Cham: Springer Nature Switzerland, 2023, pp. 122–141. doi: 10.1007/978-3-031-35017-7_9.</p>
+    <!-- Publication 4 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>A. Sergeyuk, Y. Golubev, T. Bryksin, and I. Ahmed,</strong>
+          “Using AI‑Based Coding Assistants in Practice,”
+          <em>Information & Software Technology 178</em>, Feb 2025.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 7 (duplicate as given) -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>V. Kasatskii, A. Sergeyuk, A. Serova, S. Titov, and T. Bryksin,</strong> “The Effect of Perceptual Load on Performance Within IDE in People with ADHD Symptoms,” in Augmented Cognition, D. D. Schmorrow and C. M. Fidopiastis, Eds., Cham: Springer Nature Switzerland, 2023, pp. 122–141. doi: 10.1007/978-3-031-35017-7_9.</p>
+    <!-- Publication 5 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>A. Sergeyuk, S. Titov, and M. Izadi,</strong>
+          “In‑IDE Human‑AI Experience in the Era of Large Language Models,”
+          <em>IDE ’24 Proceedings</em>, Aug 2024.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 8 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>M. Lee et al.,</strong> “A Design Space for Intelligent and Interactive Writing Assistants,” in Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems, in CHI ’24. New York, NY, USA: Association for Computing Machinery, May 2024, pp. 1–35. doi: 10.1145/3613904.3642697.</p>
+    <!-- Publication 6 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>V. Kasatskii, A. Sergeyuk, A. Serova, S. Titov, and T. Bryksin,</strong>
+          “The Effect of Perceptual Load on Performance Within IDE
+          in People with ADHD Symptoms,”
+          in <em>Augmented Cognition</em>, Springer, 2023.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 9 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>A. Sergeyuk et al.,</strong> “Reassessing Java Code Readability Models with a Human-Centered Approach,” in Proceedings of the 32nd IEEE/ACM International Conference on Program Comprehension, in ICPC ’24. New York, NY, USA: Association for Computing Machinery, Jun. 2024, pp. 225–235. doi: 10.1145/3643916.3644435.</p>
+    <!-- Publication 7 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>M. Lee et al.,</strong>
+          “A Design Space for Intelligent and Interactive Writing Assistants,”
+          <em>CHI ’24 Proceedings</em>, May 2024.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 10 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>A. Sergeyuk, O. Lvova, S. Titov, A. Serova, F. Bagirov, and T. Bryksin,</strong> “Assessing Consensus of Developers’ Views on Code Readability,” Jul. 04, 2024, arXiv:2407.03790. doi: 10.48550/arXiv.2407.03790.</p>
+    <!-- Publication 8 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>A. Sergeyuk et al.,</strong>
+          “Reassessing Java Code Readability Models with a Human‑Centered Approach,”
+          <em>ICPC ’24 Proceedings</em>, Jun 2024.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 11 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>A. Sergeyuk, S. Titov, Y. Golubev, and T. Bryksin,</strong> “Overcoming the Mental Set Effect in Programming Problem Solving,” Jul. 13, 2023, arXiv:2307.06673. doi: 10.48550/arXiv.2307.06673.</p>
+    <!-- Publication 9 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>A. Sergeyuk, O. Lvova, S. Titov, A. Serova, F. Bagirov, and T. Bryksin,</strong>
+          “Assessing Consensus of Developers’ Views on Code Readability,”
+          <em>arXiv:2407.03790</em>, Jul 2024.</p>
+      </div>
     </div>
-  </div>
 
-  <!-- Publication 12 -->
-  <div class="publication">
-    <div class="pub-text">
-      <p><strong>S. Titov, A. Sergeyuk, and T. Bryksin,</strong> “What Writing Assistants Can Learn from Programming IDEs,” Mar. 28, 2023, arXiv:2303.16175. doi: 10.48550/arXiv.2303.16175.</p>
+    <!-- Publication 10 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>A. Sergeyuk, S. Titov, Y. Golubev, and T. Bryksin,</strong>
+          “Overcoming the Mental Set Effect in Programming Problem Solving,”
+          <em>arXiv:2307.06673</em>, Jul 2023.</p>
+      </div>
     </div>
-  </div>
 
-</div>
+    <!-- Publication 11 -->
+    <div class="publication">
+      <div class="pub-text">
+        <p><strong>S. Titov, A. Sergeyuk, and T. Bryksin,</strong>
+          “What Writing Assistants Can Learn from Programming IDEs,”
+          <em>arXiv:2303.16175</em>, Mar 2023.</p>
+      </div>
+    </div>
+  </div><!-- /page‑box -->
+</main>
 </body>
 </html>

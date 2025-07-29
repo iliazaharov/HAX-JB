@@ -1,0 +1,39 @@
+/* ------------- Layout helpers ------------- */
+.wrap {
+    max-width: 960px;      /* pick one width and stick to it */
+    margin: 0 auto;        /* centres the row */
+    padding: 0 1.5rem;     /* breathable edges */
+}
+
+/* ------------- Header & title ------------- */
+.site‑header {
+    margin-top: 2rem;      /* same spacing on every page */
+}
+
+.site‑title {
+    font-size: 3.5rem;     /* adjust once */
+    margin: 0 0 .75rem 0;  /* space below title */
+    line-height: 1.1;
+    text-align: left;      /* or centre if you prefer */
+}
+
+/* ------------- Navigation ------------- */
+.main‑nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+}
+
+.main‑nav a {
+    color: #0074D9;
+    text-decoration: none;
+    padding: 0 .25rem;
+    border-right: 1px solid #999;
+}
+
+.main‑nav a:last-child { border-right: none; }
+
+.main‑nav a:hover    { text-decoration: underline; }
+.main‑nav a:visited  { color: #005a9c; }

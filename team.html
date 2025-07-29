@@ -1,66 +1,57 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>About the Team</title>
-    <!-- Skeleton CSS for a minimal, responsive layout -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-    <style>
-      body {
-        margin-top: 2em;
-        line-height: 1.6;
-      }
-      header {
-        margin-bottom: 2em;
-      }
-      h1 {
-        margin-bottom: 0.5em;
-      }
-      .team-member {
-        margin-bottom: 2em;
-        padding-bottom: 1em;
-        border-bottom: 1px solid #eee;
-      }
-      /* Left column: photo styling */
-      .member-photo {
-        max-width: 150px;
-        width: 100%;
-        border-radius: 50%;
-        margin-bottom: 1em;
-      }
-      /* Right column: info styling */
-      .member-info h3 {
-        margin-top: 0;
-        margin-bottom: 0.5em;
-      }
-    </style>
-  </head>
-  <body>
-  <div class="container">
-    <header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About the Team – Human‑AI Experience Research Team</title>
+
+  <!-- Skeleton framework -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <!-- Shared header / navigation / helpers -->
+  <link rel="stylesheet" href="/Styles/navigation.css">
+  <link rel="stylesheet" href="/Styles/page-box.css">
+  <style>  /* only truly unique rules stay inline */
+  .team-member      { margin-bottom:2.5rem; }
+  .member-photo     { width:100%; max-width:150px; border-radius:4px; }
+  .member-info h3   { margin-top:0; font-size:1.4em; }
+  </style>
+</head>
+
+<body>
+<!-- ───────────── Shared Site Header ───────────── -->
+<header class="site‑header">
+  <div class="wrap">
+    <h1 class="site‑title">HAX Team</h1>
+
+    <nav class="main‑nav">
+      <a href="index.html">About</a>
+      <a href="interesting.html">Interesting</a>
+      <a href="team.html">Team</a>
+      <a href="papers.html">Papers</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="publications.html">Publications</a>
+      <a href="conferences.html">Conferences to follow</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ───────────── Page‑specific Content ───────────── -->
+<main class="wrap">
+  <div class="page-box">
+    <header style="text-align:center;margin-bottom:2rem;">
       <h1>About the Team</h1>
     </header>
-    <nav style="margin: 1em 0;">
-      <a href="about.html">About</a> |
-      <a href="interesting.html">Interesting</a> |
-      <a href="team.html">Team</a> |
-      <a href="papers.html">Papers</a> |
-      <a href="collaborations.html">Collaborations</a> |
-      <a href="publications.html">Publications</a> |
-      <a href="conferences_older.html">Conferences to follow</a>
-    </nav>
-    <nav>
+
     <!-- Team Lead -->
     <div class="team-member row">
       <div class="three columns">
-        <!-- Replace with your photo; use a placeholder if not available -->
         <img src="images/site_Agnia.png" alt="Agnia Sergeyuk" class="member-photo">
       </div>
       <div class="nine columns member-info">
-        <h3>Team Lead - Agnia Sergeyuk</h3>
-        <p>
-          Born in Minsk, graduated with excellence from St. Petersburg State University with a Specialist degree in Clinical Psychology, pursuing a PhD Degree in Computer Science at TU Delft. Fond of DnD and traveling when out of work.
-        </p>
+        <h3>Team Lead – Agnia Sergeyuk</h3>
+        <p>Born in Minsk, graduated with excellence from St. Petersburg State University
+          in Clinical Psychology; now pursuing a PhD in Computer Science at TU Delft.
+          Fond of DnD and travelling when out of work.</p>
       </div>
     </div>
 
@@ -70,10 +61,10 @@
         <img src="images/site_Ilya.png" alt="Ilya Zakharov" class="member-photo">
       </div>
       <div class="nine columns member-info">
-        <h3>Senior Researcher - Ilya Zakharov</h3>
-        <p>
-          Graduated Cum laude from Lomonosov Moscow State University, PhD in Psychology, with a background in the intersection between psychology, neuroscience and behavioral genetics. In another life (and with better music abilities) would become an avant-garde musician.
-        </p>
+        <h3>Senior Researcher – Ilya Zakharov</h3>
+        <p>PhD in Psychology (MSU). Works at the intersection of psychology,
+          neuroscience, and behavioural genetics. In another life (and with better
+          musical talent) would be an avant‑garde musician.</p>
       </div>
     </div>
 
@@ -83,10 +74,9 @@
         <img src="images/site_Katia.png" alt="Ekaterina Koshchenko" class="member-photo">
       </div>
       <div class="nine columns member-info">
-        <h3>Researcher - Ekaterina Koshchenko</h3>
-        <p>
-          Born in Novokuznetsk, received my Master’s degree in Applied Mathematics and Informatics in Saint-Petersburg, now living in Amsterdam. At work, I research how AI influences IT specialists and their interactions. Out of work, I dance, boulder, surf, and do nerdy things.
-        </p>
+        <h3>Researcher – Ekaterina Koshchenko</h3>
+        <p>Applied‑math background from St Petersburg; now in Amsterdam researching how AI
+          influences IT specialists. Dances, boulders, surfs, and enjoys all things nerdy.</p>
       </div>
     </div>
 
@@ -96,14 +86,12 @@
         <img src="images/site_Dasha.png" alt="Dariia Karaeva" class="member-photo">
       </div>
       <div class="nine columns member-info">
-        <h3>Data Engineer - Dariia Karaeva</h3>
-        <p>
-          Download data, process data, analyze data—just love data. Have a Master’s degree in Applied Mathematics and Informatics from Moscow Institute of Physics and Technology. Living in Cyprus for three years and now consider 15°C to be cold.
-        </p>
+        <h3>Data Engineer – Dariia Karaeva</h3>
+        <p>Loves to download, process, and analyse data. M.Sc. from Moscow Institute of
+          Physics & Technology. Living in Cyprus for three years—15 °C now feels cold!</p>
       </div>
     </div>
-    </nav>
-
-  </div>
-  </body>
-  </html>
+  </div><!-- /page‑box -->
+</main>
+</body>
+</html>
