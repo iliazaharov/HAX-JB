@@ -11,29 +11,72 @@
 }
 
 .site‑title {
+    color:#07C3F2;
     font-size: 3.5rem;     /* adjust once */
     margin: 0 0 .75rem 0;  /* space below title */
     line-height: 1.1;
     text-align: left;      /* or centre if you prefer */
 }
 
-/* ------------- Navigation ------------- */
-.main‑nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    font-size: 1.15rem;
-    margin-bottom: 2rem;
+/* ---------- Navigation ---------- */
+.main‑nav{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;          /* keep everything on the same baseline */
+    gap:.4rem;                  /* breathing room between items */
+    font-size:1.4rem;
+    margin-bottom:2rem;
 }
 
-.main‑nav a {
-    color: #0074D9;
-    text-decoration: none;
-    padding: 0 .25rem;
-    border-right: 1px solid #999;
+/* text links ----------------------------------------------------------- */
+.main‑nav a{
+    position:relative;           /* allows us to draw a custom divider */
+    color:#07C3F2;
+    text-decoration:none;
+    padding:0 .45rem;            /* wider click target */
 }
 
-.main‑nav a:last-child { border-right: none; }
+.main‑nav a:hover    { text-decoration:underline; }
+.main‑nav a:visited  { color:#005a9c; }
 
-.main‑nav a:hover    { text-decoration: underline; }
-.main‑nav a:visited  { color: #005a9c; }
+/* slim divider that’s only as tall as the text */
+.main‑nav a:not(.logo-link):not(:last-of-type)::after{
+    content:'';
+    position:absolute;
+    right:0; top:50%;
+    transform:translateY(-50%);
+    width:1px;
+    height:1em;                 /* ≈ height of the text line */
+    background:#999;
+}
+
+/* logo link ------------------------------------------------------------ */
+.logo-link{
+    margin-left:auto;            /* pushes logo to the far right */
+    padding:0;                   /* kill extra space */
+    border:none;                 /* no divider */
+}
+
+.nav-logo{
+    height:32px;                 /* choose any size you like */
+    width:auto;
+    display:block;
+}
+
+/* ---------- Global font tokens ---------- */
+:root{
+    --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --headline-font: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* body text: keep your original stack */
+body{
+    font-family: var(--body-font);
+}
+
+/* site title, nav links, and all h1–h3 headings use Inter */
+.site‑title,
+.main‑nav a,
+h1, h2, h3{
+    font-family: var(--headline-font);
+}

@@ -12,7 +12,23 @@
 
   <!-- Page‑specific tweaks -->
   <style>
-    /* project card */
+    /* intro banner ------------------------------------------------------ */
+    .collab-intro{
+      margin-bottom:3rem;
+      padding:1.25rem 1.5rem;
+      border:1px solid #e0e0e0;
+      border-radius:4px;
+      background:#fdfdfd;
+    }
+    .collab-intro h2{
+      margin-top:0;
+      color:#087CFA;
+    }
+    .collab-intro ul{
+      margin:0 0 1.25rem 1.25rem;   /* indent bullets a little */
+    }
+
+    /* project card ------------------------------------------------------ */
     .project         { margin-bottom:3rem; padding:1.25rem;
       border:1px solid #e0e0e0; border-radius:4px; background:#f9f9f9; }
     .project h2      { color:#0074D9; margin-bottom:.5em; }
@@ -20,8 +36,6 @@
     .section-title   { font-weight:bold; text-transform:uppercase;
       margin-bottom:.5em; color:#333; }
     .project p       { margin-bottom:1em; }
-    .figure-placeholder { display:block; margin:0 auto 1em; max-width:100%;
-      border:1px solid #ddd; border-radius:4px; }
   </style>
 </head>
 
@@ -29,16 +43,23 @@
 <!-- ───────────── Shared Site Header ───────────── -->
 <header class="site‑header">
   <div class="wrap">
-    <h1 class="site‑title">HAX Collaborations</h1>
+    <h1 class="site‑title">Our Collaborations</h1>
 
     <nav class="main‑nav">
       <a href="index.html">About</a>
-      <a href="interesting.html">Interesting</a>
       <a href="team.html">Team</a>
-      <a href="papers.html">Papers</a>
-      <a href="collaborations.html">Collaborations</a>
       <a href="publications.html">Publications</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="interesting.html">Interesting</a>
       <a href="conferences.html">Conferences to follow</a>
+      <a href="papers.html">LitReview</a>
+
+      <a href="https://www.jetbrains.com/research/"
+         class="logo-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        <img src="images/JBR_logo.png" alt="JetBrains logo" class="nav-logo">
+      </a>
     </nav>
   </div>
 </header>
@@ -46,22 +67,49 @@
 <!-- ───────────── Page‑specific Content ───────────── -->
 <main class="wrap">
   <div class="page-box">
-    <header style="text-align:center;margin-bottom:2rem;">
-      <h1>The work we are proud to share with colleagues</h1>
-    </header>
 
-    <!-- Project 1 -->
-    <div class="project">
+    <!-- ─── Invitation to collaborate ─── -->
+    <div class="collab-intro">
+      <h2>Want to collaborate?</h2>
+      <p>
+        We’re looking for collaborators — researchers, developers, and other HCI professionals —
+        who share our passion for advancing the human‑AI experience in real‑world software‑development tools.
+      </p>
+
+      <p><strong>By collaborating with us, you can:</strong></p>
+      <ul>
+        <li>Build and evaluate HAX features directly in production‑grade developer tools.</li>
+        <li>Test your hypotheses using real‑world IDE data or a sample of professional tech creators.</li>
+        <li>Bring your ideas about the future of human‑AI collaboration in tech creation &nbsp;— and get support in planning, implementing, and evaluating them.</li>
+      </ul>
+
+      <p>
+        Our current interests include mental models of AI tools, AI‑shaped collaboration in developer teams,
+        and how multimodal AI can support coding tasks. We’re also open to other promising topics related
+        to human‑AI interaction in tech creation.
+      </p>
+      <p>
+        We provide access to infrastructure, developer workflows, and research‑grade support to enable rigorous,
+        impactful experimentation.
+      </p>
+      <p>
+        <strong>Interested?</strong> Email us at
+        <a href="mailto:agnia.sergeyuk@jetbrains.com">agnia.sergeyuk@jetbrains.com</a>
+        or
+        <a href="mailto:collaborations@research.jetbrains.org">collaborations@research.jetbrains.org</a>.
+      </p>
+    </div>
+
+    <!-- ─── Project 1 ─── -->
+    <div class="collab-intro">
       <h2>AI in Developer Teams</h2>
-      <em>Collaboration with with University of Zurich and University of British Columbia</em>
-      <img src="https://via.placeholder.com/400x200"
-           alt="Figure Placeholder" class="figure-placeholder">
+      <em>Collaboration with the University of Zurich and the University of British Columbia</em>
 
       <div>
         <div class="section-title">Motivation</div>
         <p>
           GenAI has the potential to transform traditional workflows,
-          communication, and collaboration methods in software development
+          communication, and collaboration methods in software‑development
           teams. This study explores when, why, and how developers choose AI
           tools over human interaction, revealing emerging patterns in
           AI‑mediated team dynamics.
@@ -79,12 +127,10 @@
       </div>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project">
+    <!-- ─── Project 2 ─── -->
+    <div class="collab-intro">
       <h2>Longitudinal Analysis of AI Impact</h2>
-      <em>Collaboration with UC Irvine</em>
-      <img src="https://via.placeholder.com/400x200"
-           alt="Figure Placeholder" class="figure-placeholder">
+      <em>Collaboration with UC Irvine</em>
 
       <div>
         <div class="section-title">Motivation</div>
@@ -105,12 +151,10 @@
       </div>
     </div>
 
-    <!-- Project 3 -->
-    <div class="project">
+    <!-- ─── Project 3 ─── -->
+    <div class="collab-intro">
       <h2>User‑Centred In‑IDE HAX</h2>
       <em>Collaboration with Delft University of Technology</em>
-      <img src="https://via.placeholder.com/400x200"
-           alt="Figure Placeholder" class="figure-placeholder">
 
       <div>
         <div class="section-title">Motivation</div>

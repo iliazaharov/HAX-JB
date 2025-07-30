@@ -14,47 +14,65 @@
   <link rel="stylesheet"
         href="https://unpkg.com/tabulator-tables@5.4.3/dist/css/tabulator.min.css">
 
-  <!-- Page‑unique tweaks -->
+  <!-- Page‑specific tweaks -->
   <style>
-    #papers-table { margin-top:1.5rem; }
+    #papers-table      { margin-top:1.5rem; }
+    /* make table wrapper scroll if too wide */
+    #papers-table      { overflow-x:auto; }
   </style>
 </head>
+<style>
+  #papers-table { margin-top:1.5rem; overflow-x:auto; }
 
+  /* ▼▼ NEW: make the selector row horizontal ▼▼ */
+  #columnControls           { display:flex; flex-wrap:wrap; gap:.75rem; }
+  #columnControls label     { display:inline; margin-left:.25rem; }
+  /* ▲▲ NEW ▲▲ */
+</style>
 <body>
 <!-- ───────────── Shared Site Header ───────────── -->
 <header class="site‑header">
   <div class="wrap">
-    <h1 class="site‑title">Human‑AI Experience Research Team</h1>
+    <h1 class="site‑title">HAX in-IDE: Systematic Literature Review</h1>
 
     <nav class="main‑nav">
       <a href="index.html">About</a>
-      <a href="interesting.html">Interesting</a>
       <a href="team.html">Team</a>
-      <a href="papers.html">Papers</a>
-      <a href="collaborations.html">Collaborations</a>
       <a href="publications.html">Publications</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="interesting.html">Interesting</a>
       <a href="conferences.html">Conferences to follow</a>
+      <a href="papers.html">LitReview</a>
+
+      <a href="https://www.jetbrains.com/research/"
+         class="logo-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        <img src="images/JBR_logo.png" alt="JetBrains logo" class="nav-logo">
+      </a>
     </nav>
   </div>
 </header>
 
 <!-- ───────────── Page‑specific Content ───────────── -->
-<!-- Page‑specific Content -->
 <main class="wrap">
   <div class="page-box">
-    <header>
-      <h1>Papers</h1>
-    </header>
+    <header><h1>Papers</h1></header>
 
-    <!-- ▼▼ NEW: Only one control, for grouping ▼▼ -->
-    <label for="groupBySelect">Group&nbsp;by:</label>
-    <select id="groupBySelect">
-      <option value="">(None)</option>
-      <option value="Affiliation">Affiliation</option>
-      <option value="Context">Context</option>
-      <option value="Scope">Scope</option>     <!-- ← shorter internal name -->
-    </select>
-    <!-- ▲▲ Search box removed ▲▲ -->
+    <!-- ▼▼ NEW controls row ▼▼ -->
+    <div style="margin-bottom:1rem;">
+      <label style="font-weight:600;">Columns:</label>
+      <span id="columnControls"></span>
+
+      <label for="groupBySelect" style="margin-left:1.5rem;">Group&nbsp;by:</label>
+      <select id="groupBySelect">
+        <option value="">(None)</option>
+        <option value="Affiliation">Affiliation</option>
+        <option value="Context">Context</option>
+        <option value="Scope">Scope</option>
+      </select>
+    </div>
+    <!-- ▲▲ controls row ▲▲ -->
 
     <!-- Tabulator target -->
     <div id="papers-table"></div>

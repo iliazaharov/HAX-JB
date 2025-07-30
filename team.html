@@ -4,16 +4,63 @@
   <meta charset="UTF-8" />
   <title>About the Team – Human‑AI Experience Research Team</title>
 
-  <!-- Skeleton framework -->
+  <!--‑‑ Skeleton + Inter font -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-  <!-- Shared header / navigation / helpers -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!--‑‑ Shared styles -->
   <link rel="stylesheet" href="Styles/navigation.css">
   <link rel="stylesheet" href="Styles/page-box.css">
-  <style>  /* only truly unique rules stay inline */
-  .team-member      { margin-bottom:2.5rem; }
-  .member-photo     { width:100%; max-width:150px; border-radius:4px; }
-  .member-info h3   { margin-top:0; font-size:1.4em; }
+
+  <!--‑‑ Page‑specific tweaks -->
+  <style>
+    /* ───── fonts ───── */
+    :root{
+      --body-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --headline-font: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    body{ font-family:var(--body-font); }
+    .site‑title,
+    .main‑nav a,
+    h1,h2,h3{ font-family:var(--headline-font); }
+
+    /* ───── team list layout ───── */
+    .team-member{                       /* one row per person */
+      display:flex;                     /* overrides Skeleton floats */
+      align-items:flex-start;
+      gap:1.25rem;                      /* space between photo & text */
+      margin-bottom:2rem;               /* vertical rhythm */
+    }
+    /* kill Skeleton’s floats & gutters inside the row */
+    .team-member .columns{
+      float:none;       /* turn off float */
+      margin-left:0;    /* remove 4 % gutter */
+    }
+
+    .member-photo{                      /* uniform avatar */
+      flex:0 0 120px;                   /* reserve exactly 120 px */
+      width:120px;
+      height:120px;
+      object-fit:cover;                 /* crop excess, keep aspect */
+      border-radius:4px;
+    }
+    .member-info{ flex:1; }             /* text fills remaining width */
+
+    .member-info h3{
+      margin:.25rem 0 .5rem;
+      font-size:1.35em;
+    }
+
+    /* ─── responsive tweak ─── */
+    @media (max-width:600px){
+      .team-member{ flex-direction:column; }
+      .member-photo{
+        width:100px; height:100px;
+        margin-bottom:.75rem;
+      }
+    }
   </style>
 </head>
 
@@ -21,26 +68,32 @@
 <!-- ───────────── Shared Site Header ───────────── -->
 <header class="site‑header">
   <div class="wrap">
-    <h1 class="site‑title">HAX Team</h1>
-
+    <h1 class="site‑title">Who we are</h1>
     <nav class="main‑nav">
       <a href="index.html">About</a>
-      <a href="interesting.html">Interesting</a>
       <a href="team.html">Team</a>
-      <a href="papers.html">Papers</a>
-      <a href="collaborations.html">Collaborations</a>
       <a href="publications.html">Publications</a>
+      <a href="collaborations.html">Collaborations</a>
+      <a href="interesting.html">Interesting</a>
       <a href="conferences.html">Conferences to follow</a>
+      <a href="papers.html">LitReview</a>
+
+      <a href="https://www.jetbrains.com/research/"
+         class="logo-link"
+         target="_blank"
+         rel="noopener noreferrer">
+        <img src="images/JBR_logo.png"
+             alt="HAX logo"
+             class="nav-logo">
+      </a>
     </nav>
   </div>
 </header>
 
 <!-- ───────────── Page‑specific Content ───────────── -->
 <main class="wrap">
-  <div class="page-box">
-    <header style="text-align:center;margin-bottom:2rem;">
-      <h1>About the Team</h1>
-    </header>
+  <div class="page-box" >
+      <h3>About the Team</h3>
 
     <!-- Team Lead -->
     <div class="team-member row">
@@ -48,7 +101,13 @@
         <img src="images/site_Agnia.png" alt="Agnia Sergeyuk" class="member-photo">
       </div>
       <div class="nine columns member-info">
-        <h3>Team Lead – Agnia Sergeyuk</h3>
+        <h3>
+          <a href="https://scholar.google.com/citations?user=EHnCIIwAAAAJ&hl=en"
+             target="_blank"
+             rel="noopener noreferrer">
+            Team Lead – Agnia Sergeyuk
+          </a>
+        </h3>
         <p>Born in Minsk, graduated with excellence from St. Petersburg State University
           in Clinical Psychology; now pursuing a PhD in Computer Science at TU Delft.
           Fond of DnD and travelling when out of work.</p>
@@ -61,7 +120,13 @@
         <img src="images/site_Ilya.png" alt="Ilya Zakharov" class="member-photo">
       </div>
       <div class="nine columns member-info">
-        <h3>Senior Researcher – Ilya Zakharov</h3>
+        <h3>
+          <a href="https://scholar.google.com/citations?user=MTOEI-oAAAAJ&hl=en"
+             target="_blank"
+             rel="noopener noreferrer">
+          Senior Researcher – Ilya Zakharov
+          </a>
+        </h3>
         <p>PhD in Psychology (MSU). Works at the intersection of psychology,
           neuroscience, and behavioural genetics. In another life (and with better
           musical talent) would be an avant‑garde musician.</p>
@@ -74,7 +139,14 @@
         <img src="images/site_Katia.png" alt="Ekaterina Koshchenko" class="member-photo">
       </div>
       <div class="nine columns member-info">
-        <h3>Researcher – Ekaterina Koshchenko</h3>
+        <h3>
+          <a href="https://scholar.google.com/citations?user=gQli-o0AAAAJ&hl=en&oi=ao"
+             target="_blank"
+             rel="noopener noreferrer">
+            Researcher – Ekaterina Koshchenko
+          </a>
+
+        </h3>
         <p>Applied‑math background from St Petersburg; now in Amsterdam researching how AI
           influences IT specialists. Dances, boulders, surfs, and enjoys all things nerdy.</p>
       </div>
@@ -86,7 +158,13 @@
         <img src="images/site_Dasha.png" alt="Dariia Karaeva" class="member-photo">
       </div>
       <div class="nine columns member-info">
-        <h3>Data Engineer – Dariia Karaeva</h3>
+        <h3>
+          <a href="https://www.linkedin.com/in/dariia-karaeva-214a22275/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+          Data Engineer – Dariia Karaeva
+          </a>
+        </h3>
         <p>Loves to download, process, and analyse data. M.Sc. from Moscow Institute of
           Physics & Technology. Living in Cyprus for three years—15 °C now feels cold!</p>
       </div>

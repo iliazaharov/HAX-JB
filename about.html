@@ -10,6 +10,7 @@
 
     <!-- Shared navigation / layout rules (the one that defines .wrap, .site‑header, etc.) -->
     <link rel="stylesheet" href="Styles/navigation.css">
+    <link rel="stylesheet" href="Styles/style.css">
 
     <!-- Page‑specific tweaks -->
     <style>
@@ -72,12 +73,21 @@
 
         <nav class="main‑nav">
             <a href="index.html">About</a>
-            <a href="interesting.html">Interesting</a>
             <a href="team.html">Team</a>
-            <a href="papers.html">Papers</a>
-            <a href="collaborations.html">Collaborations</a>
             <a href="publications.html">Publications</a>
+            <a href="collaborations.html">Collaborations</a>
+            <a href="interesting.html">Interesting</a>
             <a href="conferences.html">Conferences to follow</a>
+            <a href="papers.html">LitReview</a>
+
+            <a href="https://www.jetbrains.com/research/"
+               class="logo-link"
+               target="_blank"
+               rel="noopener noreferrer">
+                <img src="images/JBR_logo.png"
+                     alt="HAX logo"
+                     class="nav-logo">
+            </a>
         </nav>
     </div>
 </header>
@@ -85,15 +95,12 @@
 <!-- 2 —‑‑‑‑‑ Page‑specific content -->
 <main class="wrap">
     <div class="page-box">
-        <header style="text-align:center;margin-bottom:2rem;">
-            <h1>Who are we</h1>
-        </header>
         <!-- Hero image -->
         <section>
+
             <img src="images/HAX.png"
                  alt="Human + AI = interaction"
-                 class="team-photo"
-                 style="max-width:220px;width:100%;height:auto;display:block;margin:0 auto;">
+                 class="hero-img">
         </section>
     <!-- Introduction -->
     <section>

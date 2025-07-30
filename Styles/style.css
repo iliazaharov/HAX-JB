@@ -69,3 +69,19 @@ section h2 {
     font-size: 0.95em;
     color: #555;
 }
+
+/* ─── hero images laid out side‑by‑side ─── */
+.hero-images{
+    display: flex;              /* put children in a row */
+    justify-content: space-evenly; /* even spacing across the line */
+    align-items: center;        /* vertical alignment if heights differ */
+    gap: 1rem;                  /* optional breathing room */
+}
+
+/* make both pictures the same size and responsive */
+.hero-img{
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
