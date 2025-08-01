@@ -5,7 +5,7 @@ const CSV_URL =
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6TpxwLlvZ1WZiK2780VY-aik-yuFLnsbrL6Oqte3qe5eKpYUEot8Jsc48TheCiANQmMEMuNvHkOqu/pub?output=csv";
 
 // Columns visible on first load
-const DEFAULT_COLS = ["Title", "Authors", "Date", "Venue"];
+const DEFAULT_COLS = ["Title", "Authors", "Date", "Venue", "Research Questions"];
 
 const columns = [
     { title:"Title",    field:"Title", widthGrow:2,  visible:DEFAULT_COLS.includes("Title") },
